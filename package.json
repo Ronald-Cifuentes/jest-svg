@@ -1,19 +1,14 @@
 {
-  "name": "svg-jest",
-  "version": "1.0.1",
+  "name": "jest-svg",
+  "version": "1.0.0",
   "description": "A simple transformer for .SVG for Jest",
   "main": "index.js",
-  "repository": "https://github.com/half-halt/svg-jest.git",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "license": "MIT",
   "keywords": [
     "jest",
     "svg",
     "transform",
     "react",
     "jest-svg-transformer"
-  ],
-  "author": "samclement@msn.com",
-  "license": "MIT"
+  ]
 }

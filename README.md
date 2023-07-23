@@ -1,10 +1,6 @@
-# svg-jest
+# jest-svg
 
-![npm](https://img.shields.io/npm/v/svg-jest)
-![GitHub issues](https://img.shields.io/github/issues/half-halt/svg-jest)
-
-This is a small library which transforms .SVG files for jest. It produces
-and SVG in the stream.
+This library transforms .SVG files for jest in React components.
 
 The transformed item will have the following properties on it.
 * data-jest-file-name: The name of the file (e.g. 'some-image.svg')
@@ -29,27 +25,16 @@ const MyComponent = () => {
   );
 }
 ```
-The resulting snapshot:
-
-```html
-<div>
-    <AnImage/>
-</div>
-```
 
 The resulting HTML:
 
 ```html
 <div>
- <svg 
-	data-jest-file-name='an-image.svg' 
-	data-jest-svg-name='an-image' 
-	data-testid='an-image'/>
+    <svg data-jest-file-name='an-image.svg' 
+        data-jest-svg-name='an-image'
+        data-testid='an-image'/>
 </div>
 ```
-
-In additoin, any properties passed to '<MySvg>' are passed along into both the snapshot
-and the resulting trees.
 
 # Usage
 Configuring Jest, the example below uses package.json, but you can see: https://jestjs.io/docs/en/configuration for other examples.
@@ -58,7 +43,7 @@ Configuring Jest, the example below uses package.json, but you can see: https://
 {
     "jest": {
         "transform": {
-            "\\.svg$": "svg-jest"
+            "\\.svg$": "jest-svg"
         }
     }
 }
