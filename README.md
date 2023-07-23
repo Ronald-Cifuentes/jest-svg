@@ -1,5 +1,10 @@
 # jest-svg
 
+## based on:
+* [original](https://github.com/half-halt/svg-jest)
+* [issue](https://github.com/half-halt/svg-jest/issues/7#issue-1421584058)
+* [documentation](https://jestjs.io/docs/code-transformation)
+
 This library transforms .SVG files for jest in React components.
 
 The transformed item will have the following properties on it.
@@ -10,9 +15,9 @@ The transformed item will have the following properties on it.
 Works with both of these formats:
 
 ```js
-import MySvg from '../images/an-image.svg';
+import MySvg from '../images/image.svg';
 
-import { ReactComponent as MySvg}  from '../images/an-image.svg';
+import { ReactComponent as MySvg}  from '../images/image.svg';
 ```
 
 The following JavaScript 
@@ -30,9 +35,9 @@ The resulting HTML:
 
 ```html
 <div>
-    <svg data-jest-file-name='an-image.svg' 
-        data-jest-svg-name='an-image'
-        data-testid='an-image'/>
+    <svg data-jest-file-name='image.svg' 
+        data-jest-svg-name='image'
+        data-testid='image'/>
 </div>
 ```
 
